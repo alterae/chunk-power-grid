@@ -1,13 +1,22 @@
-mod-name := $(shell jq < mod/info.json .name -r)
+name := $(shell jq < mod/info.json .name -r)
 version := $(shell jq < mod/info.json .version -r)
 files := $(shell find mod)
+output := build/$(name)_$(version).zip
 
-.PHONY: all
+.factorio := ~/Library/Application\ Support/factorio
 
-all: $(mod-name)_$(version).zip
-
-$(mod-name)_$(version).zip: build $(files) README.md LICENSE
-	zip -r build/$(mod-name)_$(version).zip mod README.md LICENSE
+.PHONY: all clean install
+all: $(output)
 
 build:
 	mkdir build
+
+
+clean:
+	rm -rf build
+
+install: $(output)
+	cp $(output) $(.factorio)/mods
+
+$(output): build $(files) README.md LICENSE
+	zip -r $(output) mod README.md LICENSE
