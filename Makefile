@@ -11,12 +11,11 @@ all: $(output)
 build:
 	mkdir build
 
-
 clean:
 	rm -rf build
 
 install: $(output)
 	cp $(output) $(.factorio)/mods
 
-$(output): build $(files) README.md LICENSE
-	zip -r $(output) mod README.md LICENSE
+$(output): build $(files) README.md LICENSE changelog.txt
+	zip -r $(output) mod README.md LICENSE changelog.txt

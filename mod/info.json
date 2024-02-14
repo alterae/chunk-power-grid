@@ -1,6 +1,6 @@
 {
   "name": "alterae_chunk-power",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "alterae's Chunk Power Grid",
   "author": "alterae",
   "description": "Adjusts the maximum wire distance of big power poles (and optionally the supply area of substations) to better align with the chunk grid.",
