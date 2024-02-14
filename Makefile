@@ -17,5 +17,5 @@ clean:
 install: $(output)
 	cp $(output) $(.factorio)/mods
 
-$(output): build $(files) README.md LICENSE changelog.txt
-	zip -r $(output) mod README.md LICENSE changelog.txt
+$(output): build $(files) README.md LICENSE
+	zip -r $(output) mod README.md LICENSE
