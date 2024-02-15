@@ -1,11 +1,12 @@
-local ns = require "lib.namespace"
+local root = require "lib.namespace"
+local config = root.settings
 
 local wire_distance = settings
-    .startup[ns.settings.startup "big-electric-pole:maximum-wire-distance"]
+    .startup[config.startup "big-electric-pole:maximum-wire-distance"]
     .value --[[@as number]]
 
 local supply_area = settings
-    .startup[ns.settings.startup "substation:supply-area-distance"]
+    .startup[config.startup "substation:supply-area-distance"]
     .value --[[@as number]]
 
 data.raw["electric-pole"]["big-electric-pole"].maximum_wire_distance = wire_distance

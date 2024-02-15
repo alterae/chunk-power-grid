@@ -1,10 +1,11 @@
 ---@diagnostic disable: missing-fields
 
-local ns = require "lib.namespace"
+local root = require "lib.namespace"
+local startup = root.settings.startup
 
 data:extend {
     {
-        name = ns.settings.startup "big-electric-pole:maximum-wire-distance",
+        name = startup "big-electric-pole:maximum-wire-distance",
         type = "double-setting",
         default_value = 32.25,
         allowed_values = {
@@ -16,7 +17,7 @@ data:extend {
     },
 
     {
-        name = ns.settings.startup "substation:supply-area-distance",
+        name = startup "substation:supply-area-distance",
         type = "double-setting",
         default_value = 9,
         allowed_values = {
