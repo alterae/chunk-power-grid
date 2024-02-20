@@ -1,0 +1,7 @@
+{
+  "tstl": { "luaTarget": "5.2" },
+  "compilerOptions": {
+    "outDir": "out/build",
+    "types": ["typed-factorio/settings", "typed-factorio/prototype"]
+  }
+}

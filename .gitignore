@@ -1,3 +1,5 @@
-/build/
+/out/
 /.vscode/
 **/.DS_Store
+/pnpm-lock.yaml
+/node_modules/
