@@ -32,5 +32,5 @@ $(zip): $(out_dir) $(sources) $(mod_files) $(tsconfig)
 	cd $(out_dir)/..; zip -r $(name)_$(version).zip $(shell basename ../$(out_dir))
 
 $(out_dir): $(sources) $(mod_files) $(tsconfig)
-	pnpm exec tstl
+	bun x tstl
 	rsync -a $(mod_files) $(out_dir)
